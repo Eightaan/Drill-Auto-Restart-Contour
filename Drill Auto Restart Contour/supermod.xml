@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<mod
+    name = "Drill Auto Restart Contour"
+    description = ""
+	author = "Eightan"
+	version = "1.0"
+	blt_version = "2"
+	color = "0.15 0.15 0.15"
+	image = "icon.png"
+>
+<!--     <update
+        provider = "mws"
+        identifier = ""
+        patchnotes = ""
+    /> -->
+	<hooks script_path="lua/">
+        <group hook_id="lib/units/">
+			<post :hook_id="props/drill" :script_path="autorestart.lua"/>
+			<post :hook_id="interactions/interactionext" :script_path="contour.lua"/>
+		</group>
+    </hooks>
+</mod>
